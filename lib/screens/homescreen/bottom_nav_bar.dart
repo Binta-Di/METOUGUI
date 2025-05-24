@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:travee/resources/color.dart';
 import 'package:travee/screens/homescreen/home_screen.dart';
 import 'package:travee/screens/homescreen/liked_packages_screen.dart';
@@ -86,37 +86,33 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Expanded(
       child: PersistentTabView(
-        context,
-        controller: _controller,
-        screens: _buildScreens(),
-        items: _navBarsItems(),
-        margin: const EdgeInsets.only(bottom: 0),
-        padding: const NavBarPadding.all(0),
-        confineInSafeArea: true,
-        backgroundColor: kWhiteColor,
-        handleAndroidBackButtonPress: true,
-        resizeToAvoidBottomInset: true,
-        stateManagement: true,
-        hideNavigationBarWhenKeyboardShows: true,
-        decoration: NavBarDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          colorBehindNavBar: Colors.white,
-        ),
-        popAllScreensOnTapOfSelectedTab: true,
-        popActionScreens: PopActionScreensType.all,
-        itemAnimationProperties: const ItemAnimationProperties(
-          // Navigation Bar's items animation properties.
-          duration: Duration(milliseconds: 200),
-          curve: Curves.ease,
-        ),
-        screenTransitionAnimation: const ScreenTransitionAnimation(
-          // Screen transition animation on change of selected tab.
-          animateTabTransition: true,
-          curve: Curves.ease,
-          duration: Duration(milliseconds: 200),
-        ),
-        navBarStyle: NavBarStyle.style10, // Choose the nav bar style with this property.
+      context,
+      controller: _controller,
+      screens: _buildScreens(),
+      items: _navBarsItems(),
+      // confineInSafeArea: true,
+      backgroundColor: kWhiteColor,
+      handleAndroidBackButtonPress: true,
+      resizeToAvoidBottomInset: true,
+      stateManagement: true,
+      // hideNavigationBarWhenKeyboardShows: true,
+      decoration: NavBarDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        colorBehindNavBar: Colors.white,
       ),
+      // popAllScreensOnTapOfSelectedTab: true,
+      // popActionScreens: PopActionScreensType.all,
+      // itemAnimationProperties: const ItemAnimationProperties(
+      //   duration: Duration(milliseconds: 200),
+      //   curve: Curves.ease,
+      // ),
+      // screenTransitionAnimation: const ScreenTransitionAnimation(
+      //   animateTabTransition: true,
+      //   curve: Curves.ease,
+      //   duration: Duration(milliseconds: 200),
+      // ),
+      navBarStyle: NavBarStyle.style10,
+    ),
     );
   }
 }

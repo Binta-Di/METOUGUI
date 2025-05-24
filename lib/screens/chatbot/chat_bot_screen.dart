@@ -1,4 +1,6 @@
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
+import 'package:chat_gpt_sdk/chat_gpt_sdk.dart' as chat_gpt;
+import 'package:dart_openai/dart_openai.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:get/get.dart';
@@ -25,6 +27,7 @@ class ChatBotScreen extends StatefulWidget {
 class _ChatBotScreenState extends State<ChatBotScreen> {
   List<ChatModel> chatList = [];
   var textController = TextEditingController();
+  final openai = chat_gpt.OpenAI.instance;
 
   bool isChatLoading = false;
 
@@ -188,16 +191,21 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   }
 
   void chatGptModel(String question) async {
+
+    final request = ChatCompleteText(
+        messages: [Messages(role: Role.user, content: question)],
+        maxToken: 200,
+        model: GptTurboChatModel() // Model specified here, not on OpenAI instance
+    );
+
     chatList.add(ChatModel(type: "a", text: ""));
     setState(() {});
     String answer = "";
     String gptApiKey = "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";
-    final openAI = OpenAI.instance
+    final openAI = openai
         .build(token: gptApiKey, baseOption: HttpSetup(receiveTimeout: const Duration(minutes: 30)), enableLog: true);
 
-    final request = ChatCompleteText(messages: [
-      Map.of({"role": "user", "content": question})
-    ], maxToken: 200, model: GptTurboChatModel());
+
 
     final response = await openAI.onChatCompletion(request: request);
     for (var element in response!.choices) {
@@ -213,7 +221,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   Future<void> getChats(String question) async {
     String answer = "";
     String gptApiKey = "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";
-    final openAI = OpenAI.instance
+    final openAI = openai
         .build(token: gptApiKey, baseOption: HttpSetup(receiveTimeout: const Duration(minutes: 30)), enableLog: true);
 
     final request = CompleteText(prompt: question, maxTokens: 200, model: TextDavinci3Model());
@@ -222,29 +230,22 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     });
   }
 
-/* void getAnswer(String question) async {
+void getAnswer(String question) async {
     String answer = "";
-    List<OpenAIModelModel> models = await OpenAI.instance.model.list();
-    OpenAIModelModel firstModel = models.first;
+    final modelsResponse = await openai.listModel();
+    final models = modelsResponse.data;
+    final firstModel = models.first;
 
-    */ /*models.forEach((element) {
+    models.forEach((element) {
       print("model ----> ${element.id}");
     });
-*/ /*
-    OpenAICompletionModel completionModel = await OpenAI.instance.completion.create(
-      //model: "text-davinci-003", // use ada model if this limit is over
-      model: "gpt-3.5-turbo-0301",
-      prompt: question,
-      maxTokens: 100,
-      temperature: 0.5,
-      topP: 1,
-    );
+    // OpenAICompletionModel completionModel = (await openai.onCompletion(request: request)) as OpenAICompletionModel;
+    //
+    // completionModel.choices.forEach((element) {
+    //   answer += element.text;
+    // });
 
-    completionModel.choices.forEach((element) {
-      answer += element.text;
-    });
-
-    log("chat model :::::::::::::: $answer");
+    print("chat model :::::::::::::: $answer");
     chatList.add(ChatModel(type: "a", text: answer));
     setState(() {});
 
@@ -252,5 +253,5 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     //   final firstCompletionChoice = event.choices.first;
     //   answer += firstCompletionChoice.text;
     // });
-  }*/
+  }
 }
