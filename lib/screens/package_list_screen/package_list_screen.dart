@@ -21,7 +21,7 @@ class PackageListScreen extends StatefulWidget {
 
 class _PackageListScreenState extends State<PackageListScreen> {
   TourCategoryData tourCategoryData = TourCategoryData();
-  late List<Package> packageList;
+  // late List<Package> packageList;
 
   @override
   void initState() {
@@ -35,8 +35,11 @@ class _PackageListScreenState extends State<PackageListScreen> {
     //     systemNavigationBarColor: Colors.transparent,
     //   ),
     // );
-    packageList = tourCategoryData.tourCategoriesList.first.packageList;
+    // packageList = tourCategoryData.tourCategoriesList
+    //     .expand((category) => category.packageList)
+    //     .toList();
     super.initState();
+    // print("epxka ${packageList.toString()}");
   }
 
   @override
@@ -48,7 +51,7 @@ class _PackageListScreenState extends State<PackageListScreen> {
         centerTitle: true,
         titleSpacing: 0,
         title: Text(
-          "Travee",
+          "METOUGUI",
           style: TextStyle(color: kBlackColor, fontSize: 22, fontWeight: FontWeight.bold),
         ),
         leading: InkWell(
@@ -106,7 +109,7 @@ class _PackageListScreenState extends State<PackageListScreen> {
                           borderSide: BorderSide(color: kGreyColor),
                         ),
                         labelStyle: TextStyle(color: kGreyColor),
-                        labelText: "Search packages",
+                        labelText: "rechercher",
                         contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                       ),
                       onFieldSubmitted: (value) {},
@@ -136,12 +139,21 @@ class _PackageListScreenState extends State<PackageListScreen> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                itemCount: packageList.length,
+                // Filtrer par catégorie
+                itemCount: tourCategoryData.tourCategoriesList
+                    .firstWhere((cat) => cat.name == widget.packageName)
+                    .packageList.length,
                 itemBuilder: (context, index) {
+                  // Obtenir les packages de la catégorie sélectionnée
+                  var packageList = tourCategoryData.tourCategoriesList
+                      .firstWhere((cat) => cat.name == widget.packageName)
+                      .packageList;
+                  var package = packageList[index];
+
                   return GestureDetector(
                     onTap: () {
                       Get.to(PackageDetailScreen(
-                        package: packageList[index],
+                        package: package,
                         heroTag: '',
                       ));
                     },
@@ -150,10 +162,11 @@ class _PackageListScreenState extends State<PackageListScreen> {
                       children: [
                         Container(
                           decoration: const BoxDecoration(
-                              color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(15))),
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.all(Radius.circular(15))),
                           child: ClipRRect(
                             borderRadius: const BorderRadius.all(Radius.circular(15)),
-                            child: Image.asset(packageList[index].photo, fit: BoxFit.cover),
+                            child: Image.asset(package.photo, fit: BoxFit.cover),
                           ),
                         ),
                         Container(
@@ -164,26 +177,20 @@ class _PackageListScreenState extends State<PackageListScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              /// dummy row
-                              Row(
-                                children: const [Text(" ")],
-                              ),
-
-                              /// package name
+                              const Row(children: [Text(" ")]),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    packageList[index].name,
-                                    style: TextStyle(color: kWhiteColor, fontSize: 20, fontWeight: FontWeight.bold),
+                                    package.name,
+                                    style: TextStyle(
+                                        color: kWhiteColor,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
                                   )
                                 ],
                               ),
-
-                              /// dummy row
-                              Row(
-                                children: const [Text(" ")],
-                              ),
+                              const Row(children: [Text(" ")]),
                             ],
                           ),
                         )
