@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travee/screens/homescreen/bottom_nav_bar.dart';
 
+import 'demo_file.dart';
+
 void main() {
   // String gptToken = "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";
   // String gptApiKey = "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";
@@ -11,7 +13,7 @@ void main() {
   // OpenAI.apiKey = gptApiKey;
   // OpenAI.organization = orgId;
   runApp(const MyApp()); // travee app
-  //runApp(const DemoApp()); // animation class
+  // runApp(const DemoApp()); // animation class
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'travee',
+      title: 'METOUGUI',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

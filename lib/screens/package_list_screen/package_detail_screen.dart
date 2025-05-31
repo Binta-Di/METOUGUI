@@ -80,7 +80,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                               ),
                               const SizedBox(height: 10),
                               Text(
-                                "\u{20B9} ${widget.package.price}",
+                                "${widget.package.price} GNF",
                                 style: TextStyle(color: kWhiteColor, fontSize: 16),
                               )
                             ],
@@ -184,7 +184,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                         ),
                         const SizedBox(height: 20),
                         Text(
-                          "Included : ${widget.package.included}",
+                          "Packaging : ${widget.package.included}",
                           style: TextStyle(color: kGreyColor, fontSize: 14),
                         ),
                       ],
@@ -205,7 +205,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Itinerary",
+                          "Parcours",
                           style: TextStyle(color: kBlackColor, fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 20),
@@ -221,7 +221,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Day ${widget.package.itinerary[index].day}",
+                                    "Jour ${widget.package.itinerary[index].day}",
                                     style: TextStyle(color: kBlackColor, fontSize: 14, fontWeight: FontWeight.bold),
                                   ),
                                   const SizedBox(height: 10),
@@ -262,7 +262,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
               decoration: BoxDecoration(color: kPrimaryColor, borderRadius: BorderRadius.circular(14)),
               child: Center(
                 child: Text(
-                  "Book Now",
+                  "Reservez maintenant",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: kWhiteColor, fontSize: 18, fontWeight: FontWeight.bold),
                 ),
