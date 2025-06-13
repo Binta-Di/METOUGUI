@@ -86,7 +86,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                             ],
                           ),
                           Text(
-                            widget.package.duration,
+                            widget.package.duration!,
                             style: TextStyle(color: kWhiteColor, fontSize: 16),
                           )
                         ],
@@ -122,12 +122,12 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                             Column(
                               children: [
                                 Text(
-                                  widget.package.transport.toSource,
+                                  widget.package.transport!.toSource,
                                   style: TextStyle(color: kBlackColor, fontSize: 18),
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  widget.package.transport.pickupTime,
+                                  widget.package.transport!.pickupTime,
                                   style: TextStyle(color: kGreyColor, fontSize: 14),
                                 ),
                               ],
@@ -135,14 +135,14 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
 
                             // vehicle image
                             Image.asset(
-                              widget.package.transport.by == "Bus"
+                              widget.package.transport!.by == "Bus"
                                   ? "assets/images/bus.png"
-                                  : widget.package.transport.by == "Plane"
+                                  : widget.package.transport!.by == "Plane"
                                       ? "assets/images/plane.png"
                                       : "assets/images/train.png",
-                              color: widget.package.transport.by == "Bus"
+                              color: widget.package.transport!.by == "Bus"
                                   ? Colors.red
-                                  : widget.package.transport.by == "Plane"
+                                  : widget.package.transport!.by == "Plane"
                                       ? Colors.blueAccent
                                       : Colors.purpleAccent,
                               height: 26,
@@ -153,12 +153,12 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                             Column(
                               children: [
                                 Text(
-                                  widget.package.transport.fromDestination,
+                                  widget.package.transport!.fromDestination,
                                   style: TextStyle(color: kBlackColor, fontSize: 18),
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  widget.package.transport.dropTime,
+                                  widget.package.transport!.dropTime,
                                   style: TextStyle(color: kGreyColor, fontSize: 14),
                                 ),
                               ],
@@ -171,13 +171,13 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                           children: [
                             //from date
                             Text(
-                              widget.package.fromDate,
+                              widget.package.fromDate!,
                               style: TextStyle(color: kGreyColor, fontSize: 14),
                             ),
 
                             //to date
                             Text(
-                              widget.package.toDate,
+                              widget.package.toDate!,
                               style: TextStyle(color: kGreyColor, fontSize: 14),
                             )
                           ],
@@ -213,7 +213,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
-                          itemCount: widget.package.itinerary.length,
+                          itemCount: widget.package.itinerary!.length,
                           itemBuilder: (context, index) {
                             return Container(
                               padding: const EdgeInsets.all(10),
@@ -221,12 +221,12 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Jour ${widget.package.itinerary[index].day}",
+                                    "Jour ${widget.package.itinerary![index].day}",
                                     style: TextStyle(color: kBlackColor, fontSize: 14, fontWeight: FontWeight.bold),
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
-                                    widget.package.itinerary[index].place.name,
+                                    widget.package.itinerary![index].place.name,
                                     style: TextStyle(
                                       color: kBlackColor,
                                       fontSize: 14,
@@ -234,7 +234,7 @@ class _PackageDetailScreenState extends State<PackageDetailScreen> {
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
-                                    widget.package.itinerary[index].place.details,
+                                    widget.package.itinerary![index].place.details,
                                     style: TextStyle(
                                       color: kBlackColor,
                                       fontSize: 14,

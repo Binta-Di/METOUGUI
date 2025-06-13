@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "Leading you\nFrom here to beyond",
+                    "Explorez, ressentez, admirez...\navec METOUGUI",
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
                   ),
 
