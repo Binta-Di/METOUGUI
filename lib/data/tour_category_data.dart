@@ -54,6 +54,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // saputara
     Package(
       name: "Manali",
@@ -95,6 +102,13 @@ class TourCategoryData {
                 "After breakfast, get ready for a drive to Rohtang Pass. Rohtang Pass connects Manali to Lahaul and Spiti district and is known to be a high mountain pass usually covered with snow. Enjoy snow activities at the pass such as snow scooter ride, skiing, and horse riding",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
@@ -138,6 +152,13 @@ class TourCategoryData {
                 "Upon arrival in Mussoorie, complete the check-in formalities at the hotel. Enjoy a comfortable overnight stay and planning about the next day",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
     Package(
@@ -188,6 +209,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // saputara
     Package(
       name: "Manali",
@@ -229,6 +257,13 @@ class TourCategoryData {
                 "After breakfast, get ready for a drive to Rohtang Pass. Rohtang Pass connects Manali to Lahaul and Spiti district and is known to be a high mountain pass usually covered with snow. Enjoy snow activities at the pass such as snow scooter ride, skiing, and horse riding",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
@@ -272,6 +307,13 @@ class TourCategoryData {
                 "Upon arrival in Mussoorie, complete the check-in formalities at the hotel. Enjoy a comfortable overnight stay and planning about the next day",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
     Package(
@@ -322,6 +364,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // saputara
     Package(
       name: "Manali",
@@ -363,6 +412,13 @@ class TourCategoryData {
                 "After breakfast, get ready for a drive to Rohtang Pass. Rohtang Pass connects Manali to Lahaul and Spiti district and is known to be a high mountain pass usually covered with snow. Enjoy snow activities at the pass such as snow scooter ride, skiing, and horse riding",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
@@ -406,6 +462,13 @@ class TourCategoryData {
                 "Upon arrival in Mussoorie, complete the check-in formalities at the hotel. Enjoy a comfortable overnight stay and planning about the next day",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
   ];
@@ -459,6 +522,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // saputara
     Package(
       name: "Manali",
@@ -502,7 +572,7 @@ class TourCategoryData {
         ),
       ],
     ), // manali
-    Package(
+     Package(
       name: "Mussoorie",
       photo: "assets/images/tour_images/masoorie1.jpg",
       price: "14999",

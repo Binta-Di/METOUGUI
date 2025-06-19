@@ -11,6 +11,7 @@ class Package {
   String toDate;
   String included; // like meals, flight, Accommodations, activities,
   List<Itinerary> itinerary; //A detailed schedule of the trip, including dates, times, and locations
+  List<String> gallery;
 
   Package({
     required this.name,
@@ -22,5 +23,6 @@ class Package {
     required this.toDate,
     required this.included,
     required this.itinerary,
+    required this.gallery
   });
 }
