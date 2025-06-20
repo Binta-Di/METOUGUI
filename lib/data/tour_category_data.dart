@@ -96,6 +96,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // Iles de Loos
     Package(
       name: "Case traditionelle",
@@ -138,14 +145,17 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // Case traditionnelle
   ];
 
   List<Package> trekkingPackageListCulture = [
-    Package(
-      name: "Jardin d'eden",
-      photo: "assets/images/tour_images/jardin d'eden.jpeg",
-    ), // jardin d'eden
     Package(
       name: "Iles de Loos",
       photo: "assets/images/tour_images/iles de loos.jpeg",
@@ -251,7 +261,7 @@ class TourCategoryData {
     Package(
       name: "Ile de ROME",
       photo: "assets/images/tour_images/iles de loos.jpeg",
-      price: "350 000 GNF",
+      price: "350 000",
       duration: "17 heure",
       transport: Transport(
         by: "Bus and Bateau",
@@ -265,11 +275,15 @@ class TourCategoryData {
       included: "Nourriture, Connexion, Transport, accommodation, activities",
       itinerary: [
         Itinerary(
-          day: "1",
+         // day: "1",
           place: Place(
             name: "Description de l'île de Rome",
             details: "Activités: Baignade, pique-nique, découverte de la nature.\n"
                 "Une île paisible et naturelle, parfaite pour se détendre loin du bruit de la ville et pour les sorties en famille.Située sur l'archipel des îles de Loos, près de Conakry.",
+            images: [
+              "assets/images/tour_images/saputara1.jpg",
+              "assets/images/tour_images/saputara2.jpg",
+            ]
           ),
         ),
         Itinerary(
@@ -289,6 +303,13 @@ class TourCategoryData {
                 "C'est un moment de détente en plein air, où l'on savoure un repas au bord de la mer, entouré de nature et de paysages paisibles. ",
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // saputara
     Package(
@@ -332,6 +353,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // manali
     Package(
       name: "Ile de Kassa",
@@ -373,6 +401,13 @@ class TourCategoryData {
                 "On profite de balades tranquilles à travers les villages et les sentiers côtiers, tout en dégustant de délicieux fruits de mer frais préparés localement. "
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
     Package(
@@ -416,6 +451,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // saputara
     Package(
       name: "Ile Blanche",
@@ -458,6 +500,13 @@ class TourCategoryData {
           ),
         ),
       ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
     ), // manali
     Package(
       name: "Ile Corail",
@@ -499,6 +548,13 @@ class TourCategoryData {
                 "la balade en pirogue permet de faire le tour de l'île, découvrir ses criques sauvages, les îlots voisins et aussi observer les animaux locaux comme les oiseaux, les reptiles ou les tortues tout en respectant leur environnement naturel." ,
           ),
         ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
     Package(
@@ -1648,6 +1704,94 @@ class TourCategoryData {
         "assets/images/tour_images/saputara5.jpg",
       ],
     ), // mussoorie
+  ];
+
+  List<Package> trekkingPackageListPlage = [
+    Package(
+      name: "Plage camayenne",
+      photo: "assets/images/tour_images/saputara1.jpg",
+      price: "10 000",
+      duration: "7 heures",
+      transport: Transport(
+        by: "Bus",
+        toSource: "hotel",
+        fromDestination: "Camayenne",
+        pickupTime: "15h :00",
+        dropTime: "22h:30 pm",
+      ),
+      fromDate: "",
+      toDate: "",
+      included: "Nourriture, transport, wifi, activitées",
+      itinerary: [
+        Itinerary(
+          day: "1",
+          place: Place(
+            name: "Plage camayenne",
+            details: " Lake & Backwaters\n"
+                "Duration of visit: 30 Mins - 1 Hr\n"
+                "Timings: Boating: 8.30 AM - 6.30 PM\n"
+                "Entry Fee: Boating: Rs. 20 for Pedal Boat & Rs. 5 for Row Boat (For 30 min)\n"
+                "At a distance of 1 km from Saputara Bus Station, Saputara Lake is a beautiful lake situated at the heart of Saputara hill station in Gujarat. It is considered one of the most famous picnic spots for the locals and among the most scenic",
+          ),
+        ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
+    ), // saputara
+    Package(
+      name: "Plage tayaki",
+      photo: "assets/images/tour_images/manali1.jpg",
+      price: "22824",
+      duration: "5D-4N",
+      transport: Transport(
+        by: "Plane",
+        toSource: "Ahmedabad",
+        fromDestination: "Manali",
+        pickupTime: "8:30 am",
+        dropTime: "11:30 pm",
+      ),
+      fromDate: "January 14,2024",
+      toDate: "January 19,2024",
+      included: "meals, transportation, sightseeing, accommodation, activities",
+      itinerary: [
+        Itinerary(
+          day: "1",
+          place: Place(
+            name: "Delhi to Manali",
+            details: "Arrival, transfer, stay included\n"
+                "As per your itinerary, your trip starts with a road-trip from Delhi to Manali. On your way, you will be delighted to see the various sightseeing places such as Sundernagar Lake, Mini Vaishno Devi Temple, Pandoh Dam, etc. Upon arrival in Manali, our driver will drive you to the hotel and complete your check-in formalities. After check-in, have dinner and relax for an overnight stay at the hotel.",
+          ),
+        ),
+        Itinerary(
+          day: "2",
+          place: Place(
+            name: "Manali: Sightseeing",
+            details: "local sightseeing, manali market\n"
+                "After breakfast, get ready for your half day city tour of Manali. The city tour starts with the visit to holy Hadimba Temple, a wooden temple located in the middle of Van Vihar",
+          ),
+        ),
+        Itinerary(
+          day: "3",
+          place: Place(
+            name: "Solang Valley, Rohtang Pass, Day Tour",
+            details:
+            "After breakfast, get ready for a drive to Rohtang Pass. Rohtang Pass connects Manali to Lahaul and Spiti district and is known to be a high mountain pass usually covered with snow. Enjoy snow activities at the pass such as snow scooter ride, skiing, and horse riding",
+          ),
+        ),
+      ],
+      gallery: [
+        "assets/images/tour_images/saputara1.jpg",
+        "assets/images/tour_images/saputara2.jpg",
+        "assets/images/tour_images/saputara3.jpg",
+        "assets/images/tour_images/saputara4.jpg",
+        "assets/images/tour_images/saputara5.jpg",
+      ],
+    ),
   ];
 
   late List<TourCategoriesModel> tourCategoriesList = [

@@ -253,7 +253,7 @@ class _TopVisitedScreenState extends State<TopVisitedScreen> {
                                         children: [
                                           /// Prix
                                           Text(
-                                            "${packageList[index].price}€",
+                                            "${packageList[index].price} GNF",
                                             style: TextStyle(
                                               color: kPrimaryColor,
                                               fontSize: 14,
