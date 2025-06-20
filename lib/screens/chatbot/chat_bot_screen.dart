@@ -219,7 +219,7 @@ Réponds uniquement en français et de manière utile pour un touriste.
 
     String answer = "";
     // REMPLACEZ PAR VOTRE VRAIE CLÉ API OpenAI
-    String gptApiKey = "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";
+    String gptApiKey = "";
 
     try {
       final openAI = openai.build(
