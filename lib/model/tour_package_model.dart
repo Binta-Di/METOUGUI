@@ -4,25 +4,29 @@ import 'transport_model.dart';
 class Package {
   String name;
   String photo;
-  String price;
-  String duration; // like 7 Days, 6 Nights
-  Transport transport;
-  String fromDate;
-  String toDate;
-  String included; // like meals, flight, Accommodations, activities,
-  List<Itinerary> itinerary; //A detailed schedule of the trip, including dates, times, and locations
+  String? price;
+  String? duration; // like 7 Days, 6 Nights
+  Transport? transport;
+  String? fromDate;
+  String? toDate;
+  String? included; // like meals, flight, Accommodations, activities,
+  List<Itinerary>? itinerary; //A detailed schedule of the trip, including dates, times, and locations
   List<String> gallery;
+  String? description;
+  double? rating;
 
   Package({
     required this.name,
     required this.photo,
-    required this.price,
-    required this.duration,
-    required this.transport,
-    required this.fromDate,
-    required this.toDate,
-    required this.included,
-    required this.itinerary,
-    required this.gallery
+     this.price,
+     this.duration,
+     this.transport,
+     this.fromDate,
+     this.toDate,
+     this.included,
+     this.itinerary,
+    required this.gallery,
+    this.description,
+    this.rating
   });
 }

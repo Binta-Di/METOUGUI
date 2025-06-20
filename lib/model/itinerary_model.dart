@@ -1,19 +1,21 @@
 class Itinerary {
-  String day;
-  Place place;
+  String? day;
+  Place? place;
 
   Itinerary({
-    required this.day,
-    required this.place,
+     this.day,
+     this.place,
   });
 }
 
 class Place {
-  final String name;
-  final String details;
+  final String? name;
+  final String? details;
+  List<String>? images;
 
   Place({
-    required this.name,
-    required this.details,
+     this.name,
+     this.details,
+    this.images
   });
 }

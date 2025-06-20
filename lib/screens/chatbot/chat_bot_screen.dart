@@ -55,7 +55,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                     icon: const Icon(Icons.arrow_back_ios),
                   ),
                   const Text(
-                    "Search your Query",
+                    "Notre IA pour plus de fun",
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
                   )
                 ],

@@ -5,8 +5,11 @@ import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:travee/resources/color.dart';
 import 'package:travee/screens/homescreen/home_screen.dart';
 import 'package:travee/screens/homescreen/liked_packages_screen.dart';
+import 'package:travee/screens/homescreen/to_visited.dart';
 import 'package:travee/screens/homescreen/trending_packages_screen.dart';
 import 'package:travee/screens/homescreen/user_screen.dart';
+
+import 'construction_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -21,9 +24,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> _buildScreens() {
     return [
       const HomeScreen(),
-      const TrendingPackagesScreen(),
-      const LikedPackagesScreen(),
-      const UserPackagesScreen(),
+      const TopVisitedScreen(),
+      const ConstructionScreen(),
+      const ConstructionScreen(),
     ];
   }
 

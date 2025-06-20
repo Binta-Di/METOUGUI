@@ -2,6 +2,7 @@ import 'package:dart_openai/dart_openai.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travee/screens/homescreen/bottom_nav_bar.dart';
+import 'package:travee/screens/homescreen/onboarding_screen.dart';
 
 import 'demo_file.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const BottomNavBar(),
+      home: const GuineaTourismOnboarding(),
     );
   }
 }

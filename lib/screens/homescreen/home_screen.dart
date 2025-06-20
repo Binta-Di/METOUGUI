@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     packageList = tourCategoryData.tourCategoriesList
         .expand((category) => category.packageList)
+        .take(5)
         .toList();
     super.initState();
   }
