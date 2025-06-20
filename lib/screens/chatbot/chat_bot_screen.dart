@@ -1,6 +1,5 @@
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart' as chat_gpt;
-import 'package:dart_openai/dart_openai.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:get/get.dart';
@@ -55,7 +54,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                     icon: const Icon(Icons.arrow_back_ios),
                   ),
                   const Text(
-                    "Notre IA pour plus de fun",
+                    "Agent IA(METOUGUI)",
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
                   )
                 ],
@@ -80,44 +79,44 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                         alignment: item.type == "a" ? Alignment.centerLeft : Alignment.centerRight,
                         child: item.type == "q"
                             ? ChatBubble(
-                                clipper: ChatBubbleClipper2(type: BubbleType.sendBubble),
-                                alignment: Alignment.topRight,
-                                margin: const EdgeInsets.only(top: 20),
-                                backGroundColor: kPrimaryColor,
-                                child: Container(
-                                  constraints: BoxConstraints(
-                                    maxWidth: MediaQuery.of(context).size.width * 0.7,
-                                  ),
-                                  child: Text(
-                                    item.text,
-                                    style: const TextStyle(color: Colors.white, fontSize: 16),
-                                  ),
-                                ),
-                              )
+                          clipper: ChatBubbleClipper2(type: BubbleType.sendBubble),
+                          alignment: Alignment.topRight,
+                          margin: const EdgeInsets.only(top: 20),
+                          backGroundColor: kPrimaryColor,
+                          child: Container(
+                            constraints: BoxConstraints(
+                              maxWidth: MediaQuery.of(context).size.width * 0.7,
+                            ),
+                            child: Text(
+                              item.text,
+                              style: const TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                          ),
+                        )
                             : item.text.isEmpty
-                                ? Container(
-                                    margin: const EdgeInsets.only(top: 20),
-                                    child: Lottie.asset(
-                                      "assets/images/chat_anim.json",
-                                      width: 38,
-                                      height: 38,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  )
-                                : ChatBubble(
-                                    clipper: ChatBubbleClipper2(type: BubbleType.receiverBubble),
-                                    backGroundColor: const Color(0xffE7E7ED),
-                                    margin: const EdgeInsets.only(top: 20),
-                                    child: Container(
-                                      constraints: BoxConstraints(
-                                        maxWidth: MediaQuery.of(context).size.width * 0.7,
-                                      ),
-                                      child: Text(
-                                        item.text,
-                                        style: const TextStyle(color: Colors.black, fontSize: 16),
-                                      ),
-                                    ),
-                                  ),
+                            ? Container(
+                          margin: const EdgeInsets.only(top: 20),
+                          child: Lottie.asset(
+                            "assets/images/chat_anim.json",
+                            width: 38,
+                            height: 38,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                            : ChatBubble(
+                          clipper: ChatBubbleClipper2(type: BubbleType.receiverBubble),
+                          backGroundColor: const Color(0xffE7E7ED),
+                          margin: const EdgeInsets.only(top: 20),
+                          child: Container(
+                            constraints: BoxConstraints(
+                              maxWidth: MediaQuery.of(context).size.width * 0.7,
+                            ),
+                            child: Text(
+                              item.text,
+                              style: const TextStyle(color: Colors.black, fontSize: 16),
+                            ),
+                          ),
+                        ),
                       );
                     },
                   ),
@@ -155,27 +154,24 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
                             borderSide: BorderSide(color: kGreyColor),
                           ),
                           labelStyle: TextStyle(color: kGreyColor),
-                          labelText: "Search places",
+                          labelText: "Demandez sur le tourisme en Guinée",
                           contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                         ),
-                        onFieldSubmitted: (value) {},
+                        onFieldSubmitted: (value) {
+                          if (value.trim().isNotEmpty) {
+                            _sendMessage();
+                          }
+                        },
                       ),
                     ),
                     const SizedBox(width: 10),
                     InkWell(
-                      onTap: () {
-                        setState(() {
-                          chatList.add(ChatModel(type: "q", text: textController.text));
-                          chatGptModel(textController.text);
-                          // getChats(textController.text);
-                          //getAnswer(textController.text);
-                        });
-                      },
+                      onTap: _sendMessage,
                       child: Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(color: kPrimaryColor, borderRadius: BorderRadius.circular(14)),
                           child: Icon(
-                            Icons.search,
+                            Icons.send,
                             color: kWhiteColor,
                             size: 26,
                           )),
@@ -190,27 +186,77 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     );
   }
 
+  void _sendMessage() {
+    if (textController.text.trim().isEmpty) return;
+
+    setState(() {
+      chatList.add(ChatModel(type: "q", text: textController.text));
+      chatGptModel(textController.text);
+    });
+    textController.clear();
+  }
+
   void chatGptModel(String question) async {
+    // Créer un prompt spécialisé pour le tourisme en Guinée
+    String specializedPrompt = """
+Tu es un guide touristique expert de la Guinée. Tu ne réponds QUE aux questions concernant le tourisme, les voyages, la culture, l'histoire, la géographie, les attractions, l'hébergement, la gastronomie, les événements et tout ce qui concerne la découverte de la Guinée.
+
+Si la question n'est pas liée au tourisme en Guinée, réponds poliment que tu es spécialisé uniquement dans le tourisme guinéen et propose de rediriger la conversation vers ce sujet.
+
+Question de l'utilisateur: $question
+
+Réponds uniquement en français et de manière utile pour un touriste.
+""";
 
     final request = ChatCompleteText(
-        messages: [Messages(role: Role.user, content: question)],
-        maxToken: 200,
-        model: GptTurboChatModel() // Model specified here, not on OpenAI instance
+        messages: [Messages(role: Role.user, content: specializedPrompt)],
+        maxToken: 300,
+        model: GptTurboChatModel()
     );
 
     chatList.add(ChatModel(type: "a", text: ""));
     setState(() {});
+
     String answer = "";
-    String gptApiKey = "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";
-    final openAI = openai
-        .build(token: gptApiKey, baseOption: HttpSetup(receiveTimeout: const Duration(minutes: 30)), enableLog: true);
+    // REMPLACEZ PAR VOTRE VRAIE CLÉ API OpenAI
+    String gptApiKey = "";
 
+    try {
+      final openAI = openai.build(
+          token: gptApiKey,
+          baseOption: HttpSetup(
+              receiveTimeout: const Duration(minutes: 2),
+              connectTimeout: const Duration(seconds: 30),
+              sendTimeout: const Duration(seconds: 30)
+          ),
+          enableLog: true
+      );
 
+      final response = await openAI.onChatCompletion(request: request);
 
-    final response = await openAI.onChatCompletion(request: request);
-    for (var element in response!.choices) {
-      answer += element.message!.content;
-      print("data -> ${element.message?.content}");
+      if (response != null && response.choices.isNotEmpty) {
+        for (var element in response.choices) {
+          answer += element.message?.content ?? "";
+        }
+      } else {
+        answer = "Désolé, je n'ai pas pu obtenir de réponse. Veuillez réessayer.";
+      }
+    } catch (e) {
+      print("Erreur API: $e");
+      if (e.toString().contains('401') || e.toString().contains('authentication')) {
+        answer = "Erreur d'authentification. Vérifiez votre clé API OpenAI.";
+      } else if (e.toString().contains('timeout') || e.toString().contains('connection')) {
+        answer = "Connexion interrompue. Vérifiez votre connexion internet et réessayez.";
+      } else if (e.toString().contains('500')) {
+        answer = "Erreur serveur OpenAI. Veuillez réessayer dans quelques minutes.";
+      } else {
+        answer = "Une erreur s'est produite. Veuillez réessayer.";
+      }
+    }
+
+    // Vérification supplémentaire côté client
+    if (answer.isEmpty) {
+      answer = "Je suis votre guide touristique Metougui pour la Guinée. Posez-moi des questions sur les attractions, la culture, l'hébergement ou tout ce qui concerne le tourisme en Guinée !";
     }
 
     chatList.removeLast();
@@ -218,40 +264,16 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     setState(() {});
   }
 
-  Future<void> getChats(String question) async {
-    String answer = "";
-    String gptApiKey = "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";
-    final openAI = openai
-        .build(token: gptApiKey, baseOption: HttpSetup(receiveTimeout: const Duration(minutes: 30)), enableLog: true);
+  // Fonction pour vérifier si la question concerne le tourisme en Guinée
+  bool _isGuineaTourismRelated(String question) {
+    List<String> tourismKeywords = [
+      'guinée', 'conakry', 'tourisme', 'voyage', 'visiter', 'attraction',
+      'hotel', 'restaurant', 'culture', 'histoire', 'plage', 'montagne',
+      'fouta djalon', 'kindia', 'boké', 'faranah', 'kankan', 'labé',
+      'mamou', 'nzérékoré', 'dalaba', 'pita', 'dalaba', 'koundara','culture', 'nourriture'
+    ];
 
-    final request = CompleteText(prompt: question, maxTokens: 200, model: TextDavinci3Model());
-    openAI.onCompletionSSE(request: request).listen((it) {
-      debugPrint("complete text model================>${it.choices.last.text}");
-    });
-  }
-
-void getAnswer(String question) async {
-    String answer = "";
-    final modelsResponse = await openai.listModel();
-    final models = modelsResponse.data;
-    final firstModel = models.first;
-
-    models.forEach((element) {
-      print("model ----> ${element.id}");
-    });
-    // OpenAICompletionModel completionModel = (await openai.onCompletion(request: request)) as OpenAICompletionModel;
-    //
-    // completionModel.choices.forEach((element) {
-    //   answer += element.text;
-    // });
-
-    print("chat model :::::::::::::: $answer");
-    chatList.add(ChatModel(type: "a", text: answer));
-    setState(() {});
-
-    // completionModel.listen((event) {
-    //   final firstCompletionChoice = event.choices.first;
-    //   answer += firstCompletionChoice.text;
-    // });
+    String lowerQuestion = question.toLowerCase();
+    return tourismKeywords.any((keyword) => lowerQuestion.contains(keyword));
   }
 }
