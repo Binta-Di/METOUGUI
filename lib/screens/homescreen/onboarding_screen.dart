@@ -261,7 +261,7 @@ class _GuineaTourismOnboardingState extends State<GuineaTourismOnboarding>
                               ),
                             ),
                           ),
-                          const SizedBox(height: 15),
+                          const SizedBox(height: 10),
 
                           // Bouton secondaire
                           TextButton(

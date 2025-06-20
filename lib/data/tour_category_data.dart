@@ -23,7 +23,7 @@ class TourCategoryData {
       included: "nourriture, transport, connexion, hébergement, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description du jardin d'eden ",
             details: "Activités:Randonnée, velo, pédalo, Equitation, piscine, accrobranche, conöe-kayak\n"
@@ -39,7 +39,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+          //day: "3",
           place: Place(
             name: "Randonnée dans la plantation",
             details: " \n"
@@ -48,11 +48,9 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/Jardind'eden.jpeg",
+        "assets/images/Jardind'eden (2).jpeg",
+        "assets/images/jardind'eden3.jpeg",
       ],
     ), // jardin d'eden
     Package(
@@ -155,16 +153,49 @@ class TourCategoryData {
     ), // Case traditionnelle
   ];
 
-  List<Package> trekkingPackageListCulture = [
+  List<Package> trekkingPackageListPlage = [
     Package(
-      name: "Iles de Loos",
-      photo: "assets/images/tour_images/iles de loos.jpeg",
+      name: "Plage camayenne",
+      photo: "assets/images/tour_images/plage camayenne.jpeg",
+      price: "10 000",
+      duration: "7 heures",
+      transport: Transport(
+        by: "Bus",
+        toSource: "hotel",
+        fromDestination: "Camayenne",
+        pickupTime: "15h :00",
+        dropTime: "22h:30 pm",
+      ),
+      fromDate: "",
+      toDate: "",
+      included: "Nourriture, transport, wifi, activitées",
+      itinerary: [
+        Itinerary(
+          //day: "1",
+          place: Place(
+            name: "Plage camayenne",
+            details: " Lake & Backwaters\n"
+                "Duration of visit: 30 Mins - 1 Hr\n"
+                "Timings: Boating: 8.30 AM - 6.30 PM\n"
+                "Entry Fee: Boating: Rs. 20 for Pedal Boat & Rs. 5 for Row Boat (For 30 min)\n"
+                "At a distance of 1 km from Saputara Bus Station, Saputara Lake is a beautiful lake situated at the heart of Saputara hill station in Gujarat. It is considered one of the most famous picnic spots for the locals and among the most scenic",
+          ),
+        ),
+      ],
+      gallery: [
+        "assets/images/PC1.jpeg",
+        "assets/images/PC2.jpeg",
+      ],
+    ), // saputara
+    Package(
+      name: "Plage tayaki",
+      photo: "assets/images/tour_images/plage tayaki3.jpeg",
       price: "22824",
       duration: "5D-4N",
       transport: Transport(
         by: "Plane",
         toSource: "Ahmedabad",
-        fromDestination: "Iles de Loos",
+        fromDestination: "Manali",
         pickupTime: "8:30 am",
         dropTime: "11:30 pm",
       ),
@@ -175,17 +206,17 @@ class TourCategoryData {
         Itinerary(
           day: "1",
           place: Place(
-            name: "Bienvenue aux Iles de Loos",
+            name: "Delhi to Manali",
             details: "Arrival, transfer, stay included\n"
-                "As per your itinerary, your trip starts with a road-trip from Bienvenue aux Iles de Loos. On your way, you will be delighted to see the various sightseeing places such as Sundernagar Lake, Mini Vaishno Devi Temple, Pandoh Dam, etc. Upon arrival in Iles de Loos, our driver will drive you to the hotel and complete your check-in formalities. After check-in, have dinner and relax for an overnight stay at the hotel.",
+                "As per your itinerary, your trip starts with a road-trip from Delhi to Manali. On your way, you will be delighted to see the various sightseeing places such as Sundernagar Lake, Mini Vaishno Devi Temple, Pandoh Dam, etc. Upon arrival in Manali, our driver will drive you to the hotel and complete your check-in formalities. After check-in, have dinner and relax for an overnight stay at the hotel.",
           ),
         ),
         Itinerary(
           day: "2",
           place: Place(
-            name: "Iles de Loos: Sightseeing",
-            details: "local sightseeing, Iles de Loos market\n"
-                "After breakfast, get ready for your half day city tour of Iles de Loos. The city tour starts with the visit to holy Hadimba Temple, a wooden temple located in the middle of Van Vihar",
+            name: "Manali: Sightseeing",
+            details: "local sightseeing, manali market\n"
+                "After breakfast, get ready for your half day city tour of Manali. The city tour starts with the visit to holy Hadimba Temple, a wooden temple located in the middle of Van Vihar",
           ),
         ),
         Itinerary(
@@ -204,64 +235,65 @@ class TourCategoryData {
         "assets/images/tour_images/saputara4.jpg",
         "assets/images/tour_images/saputara5.jpg",
       ],
-    ), // Iles de Loos
+    ),
+  ];
+
+  List<Package> trekkingPackageListCulture = [
     Package(
-      name: "Mont Nimba",
-      photo: "assets/images/tour_images/mont nimba.jpeg",
-      price: "14999",
-      duration: "5D-4N",
+      name: "Gastronomie",
+      photo: "assets/images/tour_images/Lafidi.jpg",
+     // price: "",
+      duration: "",
       transport: Transport(
-        by: "Train",
-        toSource: "Ahmedabad",
-        fromDestination: "Mont Nimba",
-        pickupTime: "10:30 am",
-        dropTime: "12:30 pm",
+        by: "",
+        toSource: "",
+        fromDestination: "",
+        //pickupTime: "8:30 am",
+        //dropTime: "11:30 pm",
       ),
-      fromDate: "December 07,2024",
-      toDate: "December 12,2024",
-      included: "meals, transportation, sightseeing, accommodation, activities",
+      fromDate: "",
+      toDate: "",
+      included: "",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
-            name: "Train from Ahmedabad to Corbett",
-            details:
-            "Corbett, in the recent times, has become a favourite tourist haunt for its rich biodiversity. Established in 1936, it is known for being the oldest national park in the mainland Asia and first Tiger Reserve in the country. The park has varied landscapes – plain and mountainous, wet and dry, gentle and rugged, which is home to numerous animal and plant species. Among the most popular of Corbett’s wild residents are the Asiatic elephant and Bengal tiger. However, the area is equally famous for over 600 species of avifauna that makes Corbett one of the richest bird regions in the country",
+            name: "Gastronomie",
+            details: "\n"
+                "La gastronomie guinéenne allie saveurs, traditions et diversité pour offrir une cuisine aussi riche que son peuple",
           ),
         ),
         Itinerary(
-          day: "2",
+         // day: "2",
           place: Place(
-            name: "Safari in Corbett National Park",
-            details:
-            "Mont Nimba, located in the Indian state of Uttarakhand, gives a stunning view of the spectacular Himalayas. Renowned as the ‘Queen of Hills’, Mont Nimba was the summer getaway for the British during their colonial rule in India. A climb to Lal Tibba, the highest point in town, enriches the soul with inner peace one misses in busy city lives. Be spellbound by the beauty of the gushing Kempty Falls and enjoy various activities. The Happy Valley is a place where HH Dalai Lama settled with fellow Tibetans and started first Tibetan school in 1960. Saint Mary’s church, is the oldest church in the Himalayan region, which is currently under renovation. Company Gardens, Gun Hill, Lake Misty, Jwala Devi Temple, Jawahar Aquarium, Jhari Pani and Bhatta falls are some of the other attractions in Mont Nimba",
+            name: "",
+            details: "\n"
+                "",
           ),
         ),
         Itinerary(
-          day: "3",
+          //day: "3",
           place: Place(
-            name: "Drive from Corbett to Mont Nimba",
-            details: "Check-out from the hotel and embark on a road journey to the spectacular town of Mont Nimba"
-                "A lovely hill resort, Mont Nimba is located on the foothills of the Garhwal Himalayan ranges in Uttarakhand. Blessed with mighty hills, pleasing climate and varied flora and fauna, this place is rightly known as 'Queen of Hill Stations'. A paradise for nature walkers and adventure lovers, Mont Nimba offers a fantastic view of the Doon Valley"
-                "Upon arrival in Mont Nimba, complete the check-in formalities at the hotel. Enjoy a comfortable overnight stay and planning about the next day",
+            name: "",
+            details:
+            "",
           ),
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/Toh.jpg",
+        "assets/images/tour_images/plat.jpg",
+        "assets/images/tour_images/Lafidi.jpg",
       ],
-    ), // Mont Nimba
+    ), // Iles de Loos
+   // Mont Nimba
   ];
 
   List<Package> trekkingPackageListWeekend = [
     Package(
       name: "Ile de ROME",
-      photo: "assets/images/tour_images/iles de loos.jpeg",
-      price: "350 000",
+      photo: "assets/images/tour_images/Rome.jpeg",
+      price: "350 000 ",
       duration: "17 heure",
       transport: Transport(
         by: "Bus and Bateau",
@@ -280,14 +312,9 @@ class TourCategoryData {
             name: "Description de l'île de Rome",
             details: "Activités: Baignade, pique-nique, découverte de la nature.\n"
                 "Une île paisible et naturelle, parfaite pour se détendre loin du bruit de la ville et pour les sorties en famille.Située sur l'archipel des îles de Loos, près de Conakry.",
-            images: [
-              "assets/images/tour_images/saputara1.jpg",
-              "assets/images/tour_images/saputara2.jpg",
-            ]
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Baignade",
             details: "\n"
@@ -296,7 +323,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Pique-nique",
             details: " \n"
@@ -305,16 +331,13 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/Rome.jpeg",
+        "assets/images/Rome (2).jpeg",
       ],
     ), // saputara
     Package(
       name: "Ile de Tamara",
-      photo: "assets/images/tour_images/ile de tamara.jpeg",
+      photo: "assets/images/tour_images/tamara.jpeg",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -329,7 +352,6 @@ class TourCategoryData {
       included: "transport, nourriture, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de Tamara",
             details: "Activités: Visite du vieux phare, randonnée et exploration.\n"
@@ -337,7 +359,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Visite du vieux phare.",
             details: "\n"
@@ -345,7 +366,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Randonnée et exploration",
             details:
@@ -354,16 +374,14 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/ile de tamara.jpeg",
+        "assets/images/Tamara1.jpeg",
+        "assets/images/Tamara3.jpeg",
       ],
     ), // manali
     Package(
       name: "Ile de Kassa",
-      photo: "assets/images/tour_images/masoorie1.jpg",
+      photo: "assets/images/tour_images/Kassa.jpeg",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -378,7 +396,6 @@ class TourCategoryData {
       included: "Nourriture, Connexion, Transport, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de l'île de Kassa",
             details:
@@ -386,7 +403,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Baignade",
             details:
@@ -394,7 +410,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Balade et fruits de mer",
             details: ""
@@ -403,16 +418,13 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/Kassa.jpeg",
+        "assets/images/Kassa3.jpeg",
       ],
     ), // mussoorie
     Package(
       name: "Fotoba",
-      photo: "assets/images/tour_images/saputara1.jpg",
+      photo: "assets/images/tour_images/Fotoba2.jpeg",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -427,7 +439,6 @@ class TourCategoryData {
       included: "Nourriture, Transport, Connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de Fotoba",
             details: "Activités: Visite de l'ancienne prison, balade et découverte culturelle. \n"
@@ -435,7 +446,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Visite de l'ancienne prison",
             details: "\n"
@@ -443,7 +453,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Balade et decouverte culturelle",
             details: " \n"
@@ -452,16 +461,13 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/Fotoba.jpeg",
+        "assets/images/tour_images/Fotoba2.jpeg",
       ],
     ), // saputara
     Package(
       name: "Ile Blanche",
-      photo: "assets/images/tour_images/manali1.jpg",
+      photo: "assets/images/tour_images/ile blanche.webp",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -476,7 +482,6 @@ class TourCategoryData {
       included: "Nourriture, Transport, Connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de l'île Blanche",
             details: "\n"
@@ -484,7 +489,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "L'observation de la nature",
             details: "\n"
@@ -492,7 +496,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Découverte des récifs coralliens",
             details:
@@ -501,16 +504,12 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+
       ],
     ), // manali
     Package(
       name: "Ile Corail",
-      photo: "assets/images/tour_images/masoorie1.jpg",
+      photo: "assets/images/tour_images/Ile Corail.jpeg",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -525,7 +524,6 @@ class TourCategoryData {
       included: "Nourriture, transport, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de l'île Corail",
             details:
@@ -533,7 +531,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Snorkeling",
             details:
@@ -541,7 +538,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Balade en pirogue",
             details: ""
@@ -550,16 +546,12 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+
       ],
     ), // mussoorie
     Package(
       name: "Ilot de Sorro",
-      photo: "assets/images/tour_images/saputara1.jpg",
+      photo: "assets/images/tour_images/Soro.webp",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -574,7 +566,6 @@ class TourCategoryData {
       included: "nourriture, transport, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de l'ilot de Sorro",
             details: "\n"
@@ -582,7 +573,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Ambiance festive et culturelle",
             details: "\n"
@@ -590,7 +580,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Balade côtière",
             details: " \n"
@@ -599,16 +588,12 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+
       ],
     ), // saputara
     Package(
       name: "ile Kité",
-      photo: "assets/images/tour_images/manali1.jpg",
+      photo: "assets/images/tour_images/Ile Kité.jpeg",
       price: "350 000",
       duration: "8 Heures",
       transport: Transport(
@@ -623,7 +608,6 @@ class TourCategoryData {
       included: "nourriture, transport, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
             name: "Description de l'île kité",
             details: "\n"
@@ -631,7 +615,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
             name: "Baignade",
             details: "\n"
@@ -639,7 +622,6 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
             name: "Observation de la nature",
             details:
@@ -648,68 +630,57 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
-      name: "Mussoorie",
-      photo: "assets/images/tour_images/masoorie1.jpg",
-      price: "14999",
-      duration: "5D-4N",
+      name: "Ile Alcatraz",
+      photo: "assets/images/tour_images/Ile Alcatraz.jpeg",
+      price: "350 000",
+      duration: "5 jours",
       transport: Transport(
-        by: "Train",
-        toSource: "Ahmedabad",
-        fromDestination: "Mussoorie",
+        by: "Bus",
+        toSource: "Dixinn",
+        fromDestination: "Boke",
         pickupTime: "10:30 am",
-        dropTime: "12:30 pm",
+        dropTime: "15:30 pm",
       ),
-      fromDate: "December 07,2024",
-      toDate: "December 12,2024",
-      included: "meals, transportation, sightseeing, accommodation, activities",
+      fromDate: "05 Mai,2025",
+      toDate: "05 Mai,2025",
+      included: "nourriture, transport, connexion, hébergement, activites",
       itinerary: [
         Itinerary(
-          day: "1",
           place: Place(
-            name: "Train from Ahmedabad to Corbett",
-            details:
-            "Corbett, in the recent times, has become a favourite tourist haunt for its rich biodiversity. Established in 1936, it is known for being the oldest national park in the mainland Asia and first Tiger Reserve in the country. The park has varied landscapes – plain and mountainous, wet and dry, gentle and rugged, which is home to numerous animal and plant species. Among the most popular of Corbett’s wild residents are the Asiatic elephant and Bengal tiger. However, the area is equally famous for over 600 species of avifauna that makes Corbett one of the richest bird regions in the country",
+            name: "Description de l'ile Alcatraz",
+            details:"Observayion ornithologique, exploration de la faune et flore locale, balade écologique autour de l'ile, contemplation et immersion dans un environnement naturel préservé."
+            "Au large des côtes de Boké en Basse-Guinée, l'île Alcatraz est un sanctuaire naturel classé Ramsar, abritant chaque année des milliers d'oiseaux migrateurs dont la plus grande colonie de fous bruns d'Afrique de l'Ouest.",
           ),
         ),
         Itinerary(
-          day: "2",
           place: Place(
-            name: "Safari in Corbett National Park",
+            name: "Balade écologique sur l'île protégée",
             details:
-            "Mussoorie, located in the Indian state of Uttarakhand, gives a stunning view of the spectacular Himalayas. Renowned as the ‘Queen of Hills’, Mussoorie was the summer getaway for the British during their colonial rule in India. A climb to Lal Tibba, the highest point in town, enriches the soul with inner peace one misses in busy city lives. Be spellbound by the beauty of the gushing Kempty Falls and enjoy various activities. The Happy Valley is a place where HH Dalai Lama settled with fellow Tibetans and started first Tibetan school in 1960. Saint Mary’s church, is the oldest church in the Himalayan region, which is currently under renovation. Company Gardens, Gun Hill, Lake Misty, Jwala Devi Temple, Jawahar Aquarium, Jhari Pani and Bhatta falls are some of the other attractions in Mussoorie",
+               "On marche doucement autour de l'île pour observer la biodiversité unique, écouter le vent et le cri des oiseaux migrateurs, tout en apprenant l'importance de ce site classé Ramsar.",
           ),
         ),
         Itinerary(
-          day: "3",
           place: Place(
-            name: "Drive from Corbett to Mussoorie",
-            details: "Check-out from the hotel and embark on a road journey to the spectacular town of Mussoorie"
-                "A lovely hill resort, Mussoorie is located on the foothills of the Garhwal Himalayan ranges in Uttarakhand. Blessed with mighty hills, pleasing climate and varied flora and fauna, this place is rightly known as 'Queen of Hill Stations'. A paradise for nature walkers and adventure lovers, Mussoorie offers a fantastic view of the Doon Valley"
-                "Upon arrival in Mussoorie, complete the check-in formalities at the hotel. Enjoy a comfortable overnight stay and planning about the next day",
+            name: "Observation des fous bruns en pleine nidification",
+            details:
+              "Accompagné d'un guide ou d'un naturaliste, on découvre des milliers de fous bruns nichant dans leur habitat naturel, dans un silence respectueux de cet équilibre fragile."
           ),
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/ALCATA1.jpg",
+        "assets/images/tour_images/ALCATA2.jpg",
+        "assets/images/tour_images/ALCATA3.jpeg",
       ],
     ), // mussoorie
   ];
 
   List<Package> trekkingPackageListRandonner = [
     Package(
-      name: "Les forêts tropicales",
+      name: "Les tropicales",
       photo: "assets/images/tour_images/forêt tropicale.jpeg",
       price: "700 000",
       duration: "4 jours",
@@ -725,7 +696,7 @@ class TourCategoryData {
       included: "nourriture, transport, hébergement, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description des forêts tropicales",
             details: "Activités: randonnée guidée, observation des singes et chimpanzés, découverte des plantes médicales, visite des cascades, camping en pleine nature. \n"
@@ -733,7 +704,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+          //day: "2",
           place: Place(
             name: "Randonnée dans la forêt de Ziama ou de Diécké",
             details: "\n"
@@ -741,7 +712,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+          //day: "3",
           place: Place(
             name: "Step garden",
             details: " Découverte des plantes médicinales et savoirs traditionnels\n"
@@ -750,11 +721,8 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/foret tropicale2.jpeg",
+        "assets/images/tour_images/forêt tropicale.jpeg",
       ],
     ), // saputara
     Package(
@@ -774,7 +742,7 @@ class TourCategoryData {
       included: "nourriture, transport, hébergement, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description du Mont Nimba",
             details: "Activités: Randonnée en montagne, découverte de la biodiversité, visite des grottes et sources naturelles, camping en altitude, exploration des zones classées réserve en biosphère , rencontre avec les guides locaux et villages environnants.\n"
@@ -782,7 +750,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+         // day: "2",
           place: Place(
             name: "Randonnée jusqu'au sommet du Mont Nimba",
             details: "\n"
@@ -790,7 +758,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+          //day: "3",
           place: Place(
             name: "Observation des chimpanzés et espèces rares",
             details:
@@ -799,11 +767,6 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
@@ -848,15 +811,12 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/tour_images/la dame du mali.jpeg",
+        "assets/images/tour_images/la dame du mali2.jpeg",
       ],
     ), // mussoorie
     Package(
-      name: "Les chutes de Kambadaga",
+      name: "Kambadaga",
       photo: "assets/images/tour_images/chute de kampadaga.jpeg",
       price: "600 000",
       duration: "4 Jours",
@@ -872,7 +832,7 @@ class TourCategoryData {
       included: "Nourriture, transport, hébergement, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Les Chutes de Kambadaga",
             details: "Activités: Randonnée pédestre, baignade au pied des chutes, observation des oiseaux, photographie, pique-nique et détente.\n"
@@ -880,7 +840,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+          //day: "2",
           place: Place(
             name: "Baignade et pique-nique au bord de l'eau",
             details: "\n"
@@ -888,7 +848,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+          //day: "3",
           place: Place(
             name: "Descente vers les trois chutes",
             details: "\n"
@@ -897,15 +857,12 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/CKamba1.jpeg",
+        "assets/images/tour_images/chute de kampadaga.jpeg",
       ],
     ), // saputara
     Package(
-      name: "Cascade de Ditinn",
+      name: "Cascade Ditinn",
       photo: "assets/images/tour_images/cascade de ditinn.jpeg",
       price: "600 000",
       duration: "4 jours",
@@ -921,7 +878,7 @@ class TourCategoryData {
       included: "Nourriture, transport, hébergement, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description de la Cascade de Ditinn",
             details: "Activités: Randonnée pédestre jusqu'à la cascade, observation des paysages montagneux, baignade dans les bassins naturels, pique-nique en pleine nature, photograhie de la chute d'eau.\n"
@@ -929,7 +886,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+          //day: "2",
           place: Place(
             name: "Randonnée vers la cascade de Ditinn",
             details: "\n"
@@ -937,7 +894,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+         // day: "3",
           place: Place(
             name: "Baignade et détente au pied de la cascade",
             details:
@@ -946,11 +903,6 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
       ],
     ), // manali
     Package(
@@ -970,7 +922,7 @@ class TourCategoryData {
       included: "Nourriture, transport, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description du Jardin 2 Octobre",
             details:"Activités: Balade dans les allées ombragées, observation de la flore et des arbres anciens, détente et lecture en plein air, jeux et activités pour enfant, participation à des événements ou expositions ponctuelles. "
@@ -978,7 +930,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+         // day: "2",
           place: Place(
             name: "Balade et découverte botanique",
             details:
@@ -986,7 +938,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+         // day: "3",
           place: Place(
             name: "Moment de détente ou pique-nique sur la pelouse",
             details: ""
@@ -995,15 +947,13 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/jardon2octobre3.jpeg",
+        "assets/images/jardin2octobre4.jpeg",
+        "assets/images/jardin2octobre5.jpeg",
       ],
     ), // mussoorie
     Package(
-      name: "Les Rochers de Tinkisso",
+      name: " Rochers Tinkisso",
       photo: "assets/images/tour_images/rocher de tinkisso.jpeg",
       price: "800 000",
       duration: "5 Jours",
@@ -1019,7 +969,7 @@ class TourCategoryData {
       included: "nourriture, transport, hébergement, connexion, activites",
       itinerary: [
         Itinerary(
-          day: "1",
+          //day: "1",
           place: Place(
             name: "Description des Rochers de Tinkisso",
             details: "Activités: Randonnée à travers les formations rocheuses, escalade du paysage de savane, photographie des reliefs naturels, découverte géologique et légendes locales.\n"
@@ -1027,7 +977,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "2",
+          //day: "2",
           place: Place(
             name: "Randonnée entre les rochers",
             details: "\n"
@@ -1035,7 +985,7 @@ class TourCategoryData {
           ),
         ),
         Itinerary(
-          day: "3",
+         // day: "3",
           place: Place(
             name: "Pause détente ou pique-nique sur les hauteurs",
             details: "\n"
@@ -1044,11 +994,8 @@ class TourCategoryData {
         ),
       ],
       gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
+        "assets/images/Tinkisso.jpeg",
+        "assets/images/Tinkisso2.jpeg",
       ],
     ), // saputara
     Package(
@@ -1402,7 +1349,7 @@ class TourCategoryData {
     ), // mussoorie
     Package(
       name: "Palais du peuple",
-      photo: "assets/images/tour_images/saputara1.jpg",
+      photo: "assets/images/tour_images/palais du peuple.webp",
       price: "100 000",
       duration: "3 Heures",
       transport: Transport(
@@ -1706,94 +1653,6 @@ class TourCategoryData {
     ), // mussoorie
   ];
 
-  List<Package> trekkingPackageListPlage = [
-    Package(
-      name: "Plage camayenne",
-      photo: "assets/images/tour_images/saputara1.jpg",
-      price: "10 000",
-      duration: "7 heures",
-      transport: Transport(
-        by: "Bus",
-        toSource: "hotel",
-        fromDestination: "Camayenne",
-        pickupTime: "15h :00",
-        dropTime: "22h:30 pm",
-      ),
-      fromDate: "",
-      toDate: "",
-      included: "Nourriture, transport, wifi, activitées",
-      itinerary: [
-        Itinerary(
-          day: "1",
-          place: Place(
-            name: "Plage camayenne",
-            details: " Lake & Backwaters\n"
-                "Duration of visit: 30 Mins - 1 Hr\n"
-                "Timings: Boating: 8.30 AM - 6.30 PM\n"
-                "Entry Fee: Boating: Rs. 20 for Pedal Boat & Rs. 5 for Row Boat (For 30 min)\n"
-                "At a distance of 1 km from Saputara Bus Station, Saputara Lake is a beautiful lake situated at the heart of Saputara hill station in Gujarat. It is considered one of the most famous picnic spots for the locals and among the most scenic",
-          ),
-        ),
-      ],
-      gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
-      ],
-    ), // saputara
-    Package(
-      name: "Plage tayaki",
-      photo: "assets/images/tour_images/manali1.jpg",
-      price: "22824",
-      duration: "5D-4N",
-      transport: Transport(
-        by: "Plane",
-        toSource: "Ahmedabad",
-        fromDestination: "Manali",
-        pickupTime: "8:30 am",
-        dropTime: "11:30 pm",
-      ),
-      fromDate: "January 14,2024",
-      toDate: "January 19,2024",
-      included: "meals, transportation, sightseeing, accommodation, activities",
-      itinerary: [
-        Itinerary(
-          day: "1",
-          place: Place(
-            name: "Delhi to Manali",
-            details: "Arrival, transfer, stay included\n"
-                "As per your itinerary, your trip starts with a road-trip from Delhi to Manali. On your way, you will be delighted to see the various sightseeing places such as Sundernagar Lake, Mini Vaishno Devi Temple, Pandoh Dam, etc. Upon arrival in Manali, our driver will drive you to the hotel and complete your check-in formalities. After check-in, have dinner and relax for an overnight stay at the hotel.",
-          ),
-        ),
-        Itinerary(
-          day: "2",
-          place: Place(
-            name: "Manali: Sightseeing",
-            details: "local sightseeing, manali market\n"
-                "After breakfast, get ready for your half day city tour of Manali. The city tour starts with the visit to holy Hadimba Temple, a wooden temple located in the middle of Van Vihar",
-          ),
-        ),
-        Itinerary(
-          day: "3",
-          place: Place(
-            name: "Solang Valley, Rohtang Pass, Day Tour",
-            details:
-            "After breakfast, get ready for a drive to Rohtang Pass. Rohtang Pass connects Manali to Lahaul and Spiti district and is known to be a high mountain pass usually covered with snow. Enjoy snow activities at the pass such as snow scooter ride, skiing, and horse riding",
-          ),
-        ),
-      ],
-      gallery: [
-        "assets/images/tour_images/saputara1.jpg",
-        "assets/images/tour_images/saputara2.jpg",
-        "assets/images/tour_images/saputara3.jpg",
-        "assets/images/tour_images/saputara4.jpg",
-        "assets/images/tour_images/saputara5.jpg",
-      ],
-    ),
-  ];
-
   late List<TourCategoriesModel> tourCategoriesList = [
     TourCategoriesModel(
       name: "Iles",
@@ -1816,15 +1675,14 @@ class TourCategoryData {
       packageList: trekkingPackageListExcurcion,
     ),
     TourCategoriesModel(
+      name: "Culture",
+      photo: "assets/images/tour_images/img.png",
+      packageList: trekkingPackageListCulture,
+    ),
+    TourCategoriesModel(
       name: "Vacances",
       photo: "assets/images/tour_images/holidays.png",
       packageList: trekkingPackageList,
-    ),
-
-    TourCategoriesModel(
-      name: "Culture",
-      photo: "assets/images/tour_images/holidays.png",
-      packageList: trekkingPackageListCulture,
     ),
   ];
 }
